@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: local('Plus Jakarta Sans'),
+       url('./assets/fonts/PlusJakartaSans.ttf') format('truetype');
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f8f9fa; /* Bootstrap light background */
+  color: #212529;      /* Bootstrap body text */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
