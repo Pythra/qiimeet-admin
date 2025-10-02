@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { API_BASE_URL } from '../../env';
+import { Logo } from './ui/Logo';
 
 const Login = ({ onLogin }) => {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
@@ -103,28 +104,12 @@ const Login = ({ onLogin }) => {
           marginBottom: '32px'
         }}>
           <div style={{
-            width: '60px',
-            height: '60px',
-            backgroundColor: '#6ec531',
-            borderRadius: '50%',
             margin: '0 auto 16px',
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'white',
-            fontSize: '24px',
-            fontWeight: 'bold'
+            justifyContent: 'center'
           }}>
-            Q
-          </div>
-          <h1 style={{
-            fontSize: '28px',
-            fontWeight: '700',
-            color: '#1f2937',
-            margin: '0 0 8px 0'
-          }}>
-            Qiimeet Admin
-          </h1>
+            <Logo />
+          </div> 
           <p style={{
             fontSize: '16px',
             color: '#6b7280',
@@ -155,11 +140,16 @@ const Login = ({ onLogin }) => {
               style={{
                 width: '100%',
                 padding: '12px 16px',
-                border: '2px solid #e5e7eb',
-                borderRadius: '8px',
+                border: '0px solid #e5e7eb',
+                borderRadius: '90px',
                 fontSize: '16px',
                 transition: 'border-color 0.2s',
-                boxSizing: 'border-box'
+                boxSizing: 'border-box',
+                backgroundColor: '#ffffff',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                outline: 'none',
+                WebkitAppearance: 'none',
+                MozAppearance: 'none'
               }}
               onFocus={(e) => e.target.style.borderColor = '#6ec531'}
               onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
@@ -187,10 +177,15 @@ const Login = ({ onLogin }) => {
                 width: '100%',
                 padding: '12px 16px',
                 border: '2px solid #e5e7eb',
-                borderRadius: '8px',
+                borderRadius: '90px',
                 fontSize: '16px',
                 transition: 'border-color 0.2s',
-                boxSizing: 'border-box'
+                boxSizing: 'border-box',
+                backgroundColor: '#ffffff',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                outline: 'none',
+                WebkitAppearance: 'none',
+                MozAppearance: 'none'
               }}
               onFocus={(e) => e.target.style.borderColor = '#6ec531'}
               onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
@@ -219,18 +214,18 @@ const Login = ({ onLogin }) => {
             style={{
               width: '100%',
               padding: '14px',
-              backgroundColor: isLoading ? '#9ca3af' : '#6ec531',
+              backgroundColor: isLoading ? '#9ca3af' : '#ec066a',
               color: 'white',
               border: 'none',
-              borderRadius: '8px',
+              borderRadius: '90px',
               fontSize: '16px',
               fontWeight: '600',
               cursor: isLoading ? 'not-allowed' : 'pointer',
               transition: 'background-color 0.2s',
               marginBottom: '16px'
             }}
-            onMouseEnter={(e) => !isLoading && (e.target.style.backgroundColor = '#5bb52a')}
-            onMouseLeave={(e) => !isLoading && (e.target.style.backgroundColor = '#6ec531')}
+            onMouseEnter={(e) => !isLoading && (e.target.style.backgroundColor = '#d61f69')}
+            onMouseLeave={(e) => !isLoading && (e.target.style.backgroundColor = '#ec066a')}
           >
             {isLoading ? 'Signing in...' : 'Sign In'}
           </button>
