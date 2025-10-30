@@ -17,6 +17,7 @@ const menuItems = [
 	{ id: 'verification', label: 'Verification', icon: verIcon },
 	{ id: 'admin', label: 'Admin Management', icon: unionIcon },
 	{ id: 'disputes', label: 'Dispute Management', icon: disIcon },
+	{ id: 'deletion_requests', label: 'Deletion Requests', icon: disIcon },
 	{ id: 'subscription', label: 'Subscription Plans', icon: dollIcon },
 	{ id: 'earnings', label: 'Earnings', icon: earIcon },
 	{ id: 'settings', label: 'Settings', icon: setIcon },

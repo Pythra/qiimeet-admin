@@ -27,6 +27,7 @@ export const PermissionsProvider = ({ children, user }) => {
           verification: true,
           admin: true,
           disputes: true,
+          deletion_requests: true,
           subscription: true,
           earnings: true,
           settings: true
@@ -44,6 +45,7 @@ export const PermissionsProvider = ({ children, user }) => {
           verification: userPermissions.verification || false,
           admin: false, // Subadmins can't access admin management
           disputes: userPermissions.disputeManagement || false,
+          deletion_requests: false,
           subscription: userPermissions.subscriptionPlans || false,
           earnings: userPermissions.earnings || false,
           settings: false // Subadmins can't access settings

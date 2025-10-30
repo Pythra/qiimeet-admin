@@ -14,6 +14,7 @@ import SubscriptionManagement from './components/dashboard/SubscriptionManagemen
 import Earnings from './components/dashboard/Earnings'
 import AdminManagement from './components/users/AdminManagement'
 import AdminVerification from './components/users/AdminVerification'
+import DeletionRequests from './components/users/DeletionRequests'
 import Login from './components/Login'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import DeletePage from './components/DeletePage'
@@ -123,6 +124,7 @@ function AppMainContent({ activeTab, setActiveTab, handleTabChange, user, onSign
             activeTab === 'earnings' ? 'Earnings' :
             activeTab === 'disputes' ? 'Dispute Management' :
             activeTab === 'settings' ? 'Settings' :
+            activeTab === 'deletion_requests' ? 'Deletion Requests' :
             'Admin Dashboard'
           }
           user={user}
@@ -169,6 +171,10 @@ function AppMainContent({ activeTab, setActiveTab, handleTabChange, user, onSign
         ) : activeTab === 'verification' ? (
           <ProtectedRoute tabId="verification">
             <AdminVerification />
+          </ProtectedRoute>
+        ) : activeTab === 'deletion_requests' ? (
+          <ProtectedRoute tabId="deletion_requests">
+            <DeletionRequests />
           </ProtectedRoute>
         ) : null}
       </div>

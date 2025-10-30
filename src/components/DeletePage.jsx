@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { API_BASE_URL } from '../../env';
 
 const DeletePage = () => {
   const [email, setEmail] = useState('');
@@ -15,8 +16,7 @@ const DeletePage = () => {
     setError('');
 
     try {
-      // Simulate API call - replace with actual endpoint
-      const response = await fetch('/api/data-deletion-request', {
+      const response = await fetch(`${API_BASE_URL}/data-deletion-request`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -355,3 +355,7 @@ const DeletePage = () => {
 };
 
 export default DeletePage;
+
+
+
+
