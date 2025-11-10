@@ -18,6 +18,7 @@ import DeletionRequests from './components/users/DeletionRequests'
 import Login from './components/Login'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import DeletePage from './components/DeletePage'
+import SafetyStandards from './components/SafetyStandards'
 import { DataProvider } from './contexts/DataContext.jsx'
 import { PermissionsProvider, usePermissions } from './contexts/PermissionsContext.jsx'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -71,6 +72,7 @@ function AppContent() {
         {/* Public routes - no authentication required */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/delete-data" element={<DeletePage />} />
+        <Route path="/safety-standards" element={<SafetyStandards />} />
         
         {/* Protected admin routes */}
         <Route path="/*" element={
